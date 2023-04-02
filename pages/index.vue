@@ -1,16 +1,32 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
+    <v-col>
+      <h2>How It Started</h2>
+      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+      <v-btn>hi</v-btn>
     </v-col>
+    <Logo id="logo" />
   </v-row>
 </template>
 
 <script>
+import Logo from "~/components/Logo.vue"
 export default {
   name: 'IndexPage',
 
   created () {
     window.addEventListener('resize', this.resizeHandler)
+  },
+
+  mounted() {
+    const logo = document.getElementById('logo')
+    setTimeout(() => {
+      logo.style.zIndex = '-1'
+    }, 3000);
+  },
+
+  components: {
+    Logo,
   },
 
   data () {

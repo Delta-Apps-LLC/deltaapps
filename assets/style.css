@@ -1,3 +1,17 @@
+/* STYLES
+    White: #f1f2fa
+    Light blue: #5bb3fa
+    Royal Blue: #233bfa
+    Dark: #1a1e2d
+*/
+
 .main {
-    background-color: transparent;
+    background-color: #1a1e2d;
+}
+
+@font-face {
+    font-family: 'Aileron Regular';
+    src: url('/fonts/aileron-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
