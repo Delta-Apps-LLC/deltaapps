@@ -74,14 +74,14 @@ export default {
         {
             avatar: null,
             title: 'Acorns for Charity',
-            description: 'Connect your bank account and round up all your purchases to donate to charity. \n(Not yet made)',
-            link: 'https://google.com'
+            description: 'Connect your bank account and round up all your purchases to donate to charity.\n(Not yet made)',
+            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
         },
         {
             avatar: null,
             title: 'Family Management',
-            description: 'Manage chores, responsibilities, calendars, and rewards for your family! \n(Not yet made)',
-            link: 'https://google.com'
+            description: 'Manage chores, responsibilities, calendars, and rewards for your family!\n(Not yet made)',
+            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
         },
       ],
     }

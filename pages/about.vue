@@ -6,7 +6,7 @@
 
       <v-spacer style="margin-top: 1%;"/>
 
-      <h2>What to expect next?</h2>
+      <h2>What to expect next</h2>
       <ul>
         <li>We are currently finishing Penguin Board's payment system</li>
         <li>MakeMeQuit will be next on our agenda</li>
@@ -14,7 +14,7 @@
 
       <v-spacer style="margin-top: 1%;"/>
 
-      <h2>Who we are?</h2>
+      <h2>Who we are</h2>
       <h3>
         The two founders of Delta Apps are 
         <a href="https://www.linkedin.com/in/andrew-thibaudeau/">Andrew Thibaudeau</a> and 
@@ -22,6 +22,28 @@
         Both of us are BYU students that met in the Marriott School's Sandbox Program, a Y Combinator like program. 
         It was during this time that we made our first products.
       </h3>
+
+      <v-spacer style="margin-top: 1%;"/>
+
+      <h2>What we strive for</h2>
+      <h3>We strive to utilize technology to build platforms and resources to help make a lasting positive impact.</h3>
+
+      <v-spacer style="margin-top: 1%;"/>
+
+      <v-row class="picture-row text-center" justify="center" align="center">
+        <v-card class="team-card"
+          v-for="(person, i) in team" :key="i"
+          width="200px"
+        >
+          <div class="team-card-content">
+            <img class="team-img" :src="require(`~/assets/images/${person.imgBlob}`)" />
+            <v-spacer />
+            <span class="name-text">{{person.name}}</span>
+            <v-spacer />
+            <span class="role-text">{{person.role}}</span>
+          </div>
+        </v-card>
+      </v-row>
 
     </v-col>
   </v-row>
@@ -38,6 +60,20 @@ export default {
   data () {
     return {
       windowWidth: window.innerWidth,
+      team: [
+        {
+          name: 'Andrew Thibaudeau',
+          img: 'andrew.jpg',
+          imgBlob: 'andrew-blob.png',
+          role: 'Software Engineer',
+        },
+        {
+          name: 'Travis Reynertson',
+          img: 'travis.jpg',
+          imgBlob: 'travis-blob.png',
+          role: 'Software Engineer',
+        },
+      ]
     }
   },
 
@@ -69,5 +105,47 @@ a {
   color: white !important;
 }
 
+.picture-row {
+  margin-top: 40px;
+}
+
+.team-card {
+  background-color: #2B2E36;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.team-card-content {
+  margin: 20px 0px;
+}
+
+.team-img {
+  /* border-radius: 50%; */
+  width: 150px;
+}
+
+.name-text {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #eaeaea;
+}
+
+.role-text {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  /* font-weight: 600; */
+  font-size: 15px;
+  line-height: 150%;
+  color: #eaeaea;
+}
+
+.background-row {
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
 
 </style>

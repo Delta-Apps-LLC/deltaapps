@@ -3,7 +3,7 @@
     <v-col>
       <h2>How It Started</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
-      <p>In the beginning God created heaven and earth</p>
+      <p>In the beginning God created the heavens and the earth.</p>
     </v-col>
     
     <Logo id="logo" />
