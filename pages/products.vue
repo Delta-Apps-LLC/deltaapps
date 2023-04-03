@@ -3,6 +3,34 @@
     <v-col>
       <h2>Our Products</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+      <v-row justify="center" style="margin: 10px;">
+        <v-card
+            class="card"
+            v-for="(product, i) in products"
+            :key="i"
+            width="300px"
+        > <!-- color="#2f3453" -->
+            <v-card-title class="text-center">
+                <v-avatar>
+                    <v-icon v-if="product.avatar === null">mdi-account-circle</v-icon>
+                    <img v-else :src="product.avatar" />
+                </v-avatar>
+                <span class="title">{{product.title}}</span>
+            </v-card-title>
+
+            <v-card-subtitle class="description text-center">
+                {{product.description}}
+            </v-card-subtitle>
+
+            <v-card-actions>
+                <v-spacer />
+                <a target="_blank" :href="product.link" style="text-decoration: none;">
+                    <v-btn class="site-btn">Visit Site</v-btn>
+                </a>
+                <v-spacer />
+            </v-card-actions>
+        </v-card>
+      </v-row>
     </v-col>
   </v-row>
 </template>
@@ -18,6 +46,44 @@ export default {
   data () {
     return {
       windowWidth: window.innerWidth,
+      products: [
+        {
+            avatar: 'icon.png',
+            title: 'Penguin Board',
+            description: 'Virtual Greeting Cards',
+            link: 'https://penguinboard.app'
+        },
+        {
+            avatar: 'v.png',
+            title: 'Maupin Homes',
+            description: 'Freelance web development for Maupin Homes, LLC',
+            link: 'https://maupinhomesco.com'
+        },
+        {
+            avatar: 'vuetify-logo.svg',
+            title: 'Write Now',
+            description: 'Online journal with shareable daily prompts',
+            link: 'https://joinwritenow.com'
+        },
+        {
+            avatar: null,
+            title: 'Make Me Quit',
+            description: 'Platform for tech employees to set preferences for future job offers.',
+            link: 'https://makemequit.dev'
+        },
+        {
+            avatar: null,
+            title: 'Acorns for Charity',
+            description: 'Connect your bank account and round up all your purchases to donate to charity.',
+            link: 'https://google.com'
+        },
+        {
+            avatar: null,
+            title: 'Family Management',
+            description: 'Manage chores, responsibilities, calendars, and rewards for your family!',
+            link: 'https://google.com'
+        },
+      ],
     }
   },
 
@@ -36,3 +102,31 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@import '~/assets/style.css';
+
+.card {
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.title {
+    margin-left: 15px;
+    font-family: 'Aileron Regular', sans-serif !important;
+    font-size: 22px !important;
+    color: #f1f2fa;
+}
+
+.description {
+    padding: 15px;
+    font-family: 'Aileron Regular', sans-serif !important;
+}
+
+.site-btn {
+    font-family: 'Aileron Regular', sans-serif !important;
+    color: #f1f2fa;
+    background-color: #233bfa !important;
+}
+
+</style>

@@ -5,13 +5,32 @@
     Dark: #1a1e2d
 */
 
-.main {
+.main, #main {
     background-color: #1a1e2d;
 }
 
+h2 {
+    font-family: 'Aileron Regular', sans-serif !important;
+}
+
+/* .main-fade {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} */
+
 @font-face {
     font-family: 'Aileron Regular';
-    src: url('/fonts/aileron-regular.ttf') format('truetype');
+    src: url('/fonts/Aileron-Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

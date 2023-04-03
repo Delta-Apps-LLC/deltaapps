@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="main-fade">
     <v-app-bar
       class="app-bar"
       fixed
@@ -23,7 +23,7 @@
       </v-btn>
     </v-app-bar>
 
-    <v-main class="main">
+    <v-main class="main-fade" id="main">
       <v-container class="main">
         <Nuxt class="main" />
       </v-container>
@@ -55,6 +55,10 @@ export default {
       title: 'Delta Apps',
       windowWidth: window.innerWidth,
       navBtns: [
+        {
+          text: 'Home',
+          to: '/',
+        },
         {
           text: 'About',
           to: '/about',
@@ -101,6 +105,7 @@ export default {
   background-color: transparent !important;
   position: fixed;
   z-index: 10;
+  padding: 5px 32px;
 }
 
 .nav-btns {

@@ -3,8 +3,8 @@
     <v-col>
       <h2>How It Started</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
-      <v-btn>hi</v-btn>
     </v-col>
+    
     <Logo id="logo" />
   </v-row>
 </template>
