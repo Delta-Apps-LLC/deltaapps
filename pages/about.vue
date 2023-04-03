@@ -1,8 +1,28 @@
 <template>
   <v-row justify="center" align="center">
     <v-col>
-      <h2>About Us</h2>
+      <h1>About Us</h1>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+
+      <v-spacer style="margin-top: 1%;"/>
+
+      <h2>What to expect next?</h2>
+      <ul>
+        <li>We are currently finishing Penguin Board's payment system</li>
+        <li>MakeMeQuit will be next on our agenda</li>
+      </ul>
+
+      <v-spacer style="margin-top: 1%;"/>
+
+      <h2>Who we are?</h2>
+      <h3>
+        The two founders of Delta Apps are 
+        <a href="https://www.linkedin.com/in/andrew-thibaudeau/">Andrew Thibaudeau</a> and 
+        <a href="https://www.linkedin.com/in/travisreynertson/">Travis Reynertson</a>. 
+        Both of us are BYU students that met in the Marriott School's Sandbox Program, a Y Combinator like program. 
+        It was during this time that we made our first products.
+      </h3>
+
     </v-col>
   </v-row>
 </template>
@@ -39,6 +59,15 @@ export default {
 
 <style scoped>
 @import '~/assets/style.css';
+
+h3, li {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a {
+  color: white !important;
+}
 
 
 </style>

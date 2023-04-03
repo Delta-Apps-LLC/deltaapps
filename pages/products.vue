@@ -48,7 +48,7 @@ export default {
       windowWidth: window.innerWidth,
       products: [
         {
-            avatar: 'icon.png',
+            avatar: 'penguin-logo-mint.png',
             title: 'Penguin Board',
             description: 'Virtual Greeting Cards',
             link: 'https://penguinboard.app'
@@ -66,7 +66,7 @@ export default {
             link: 'https://joinwritenow.com'
         },
         {
-            avatar: null,
+            avatar: 'MakeMeQuit.png',
             title: 'Make Me Quit',
             description: 'Platform for tech employees to set preferences for future job offers.',
             link: 'https://makemequit.dev'
@@ -74,13 +74,13 @@ export default {
         {
             avatar: null,
             title: 'Acorns for Charity',
-            description: 'Connect your bank account and round up all your purchases to donate to charity.',
+            description: 'Connect your bank account and round up all your purchases to donate to charity. \n(Not yet made)',
             link: 'https://google.com'
         },
         {
             avatar: null,
             title: 'Family Management',
-            description: 'Manage chores, responsibilities, calendars, and rewards for your family!',
+            description: 'Manage chores, responsibilities, calendars, and rewards for your family! \n(Not yet made)',
             link: 'https://google.com'
         },
       ],
