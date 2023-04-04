@@ -5,12 +5,12 @@
       fixed
       app
       flat
-      height="115px"
+      height="100px"
       :style="{'padding': isMobile ? '5px 0' : null}"
     >
       <!-- Logo -->
       <button @click="toHome()">
-        <img src="~/assets/images/delta-trans.png" height="100px" />
+        <img src="~/assets/images/logo-hzn.png" :height="isMobile ? '50px' : windowWidth > 1300 ? '70px' : '60px'" />
       </button>
 
       <v-spacer />
@@ -71,15 +71,29 @@
       <v-spacer />
       <span class="footer">{{contact}}</span>
     </v-footer>
+
+    <Logo id="logo" />
   </v-app>
 </template>
 
 <script>
+import Logo from '~/components/Logo.vue'
 export default {
   name: 'DefaultLayout',
 
   created () {
     window.addEventListener('resize', this.resizeHandler)
+  },
+
+  mounted() {
+    const logo = document.getElementById('logo')
+    setTimeout(() => {
+      logo.style.zIndex = '-1'
+    }, 3000);
+  },
+
+  components: {
+    Logo,
   },
 
   data () {

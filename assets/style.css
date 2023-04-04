@@ -9,8 +9,9 @@
     background-color: #1a1e2d;
 }
 
-h2 {
+h1, h2 {
     font-family: 'Aileron Regular', sans-serif !important;
+    color: #f1f2fa;
 }
 
 /* .main-fade {

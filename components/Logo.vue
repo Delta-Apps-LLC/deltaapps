@@ -32,7 +32,7 @@ export default {
 }
 
 .icon {
-    width: 400px;
+  width: 400px;
   height: 400px;
   background-image: url('/icon.png');
   background-repeat: no-repeat;
