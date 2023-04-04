@@ -6,6 +6,7 @@
       app
       flat
       height="115px"
+      :style="{'padding': isMobile ? '5px 0' : null}"
     >
       <!-- Logo -->
       <button @click="toHome()">
@@ -13,14 +14,45 @@
       </button>
 
       <v-spacer />
-      <v-btn class="nav-btns"
-        v-for="(btn, i) in navBtns"
-        :key="i"
-        :to="btn.to"
-        text
+      <div v-if="!isMobile">
+        <v-btn class="nav-btns"
+          v-for="(btn, i) in navBtns"
+          :key="i"
+          :to="btn.to"
+          text
+        >
+          {{ btn.text }}
+        </v-btn>
+      </div>
+
+      <v-menu
+        v-if="isMobile"
+        close-on-click
+        close-on-content-click
+        bottom
+        transition="slide-y-transition"
       >
-        {{ btn.text }}
-      </v-btn>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn icon v-on="on" v-bind="attrs">
+            <v-icon>mdi-menu</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item
+            v-for="(btn, i) in navBtns"
+            :key="i"
+          >
+            <v-btn class="nav-btns"
+              :to="btn.to"
+              text
+            >
+              {{ btn.text }}
+            </v-btn>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+
     </v-app-bar>
 
     <v-main class="main-fade" id="main">

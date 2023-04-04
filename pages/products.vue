@@ -83,6 +83,12 @@ export default {
             description: 'Manage chores, responsibilities, calendars, and rewards for your family!',
             link: 'https://google.com'
         },
+        {
+            avatar: null,
+            title: 'Goat Notes',
+            description: 'Note taking combined with flashcards!',
+            link: 'https://goatnotes.net'
+        }
       ],
     }
   },
