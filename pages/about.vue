@@ -1,11 +1,56 @@
 <template>
   <v-row justify="center" align="center">
     <v-col>
+
       <h2>Who We Are</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       
       <h2>How It Started</h2>
+      <h1>About Us</h1>
+
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+
+      <v-spacer style="margin-top: 1%;"/>
+
+      <h2>What to expect next</h2>
+      <ul>
+        <li>We are currently finishing Penguin Board's payment system</li>
+        <li>MakeMeQuit will be next on our agenda</li>
+      </ul>
+
+      <v-spacer style="margin-top: 1%;"/>
+
+      <h2>Who we are</h2>
+      <h3>
+        The two founders of Delta Apps are 
+        <a href="https://www.linkedin.com/in/andrew-thibaudeau/">Andrew Thibaudeau</a> and 
+        <a href="https://www.linkedin.com/in/travisreynertson/">Travis Reynertson</a>. 
+        Both of us are BYU students that met in the Marriott School's Sandbox Program, a Y Combinator like program. 
+        It was during this time that we made our first products.
+      </h3>
+
+      <v-spacer style="margin-top: 1%;"/>
+
+      <h2>What we strive for</h2>
+      <h3>We strive to utilize technology to build platforms and resources to help make a lasting positive impact.</h3>
+
+      <v-spacer style="margin-top: 1%;"/>
+
+      <v-row class="picture-row text-center" justify="center" align="center">
+        <v-card class="team-card"
+          v-for="(person, i) in team" :key="i"
+          width="200px"
+        >
+          <div class="team-card-content">
+            <img class="team-img" :src="require(`~/assets/images/${person.imgBlob}`)" />
+            <v-spacer />
+            <span class="name-text">{{person.name}}</span>
+            <v-spacer />
+            <span class="role-text">{{person.role}}</span>
+          </div>
+        </v-card>
+      </v-row>
+
     </v-col>
   </v-row>
 </template>
@@ -21,6 +66,20 @@ export default {
   data () {
     return {
       windowWidth: window.innerWidth,
+      team: [
+        {
+          name: 'Andrew Thibaudeau',
+          img: 'andrew.jpg',
+          imgBlob: 'andrew-blob.png',
+          role: 'Software Engineer',
+        },
+        {
+          name: 'Travis Reynertson',
+          img: 'travis.jpg',
+          imgBlob: 'travis-blob.png',
+          role: 'Software Engineer',
+        },
+      ]
     }
   },
 
@@ -43,5 +102,59 @@ export default {
 <style scoped>
 @import '~/assets/style.css';
 
+h3, li {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a {
+  color: white !important;
+}
+
+.picture-row {
+  margin-top: 40px;
+}
+
+.team-card {
+  /* background-color: #2B2E36; */
+  background-color: white;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.team-card-content {
+  margin: 20px 0px;
+}
+
+.team-img {
+  /* border-radius: 50%; */
+  width: 150px;
+}
+
+.name-text {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  /* color: #eaeaea; */
+  color: #1a1e2d;
+}
+
+.role-text {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  /* font-weight: 600; */
+  font-size: 15px;
+  line-height: 150%;
+  /* color: #eaeaea; */
+  color: #1a1e2d;
+}
+
+.background-row {
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
 
 </style>

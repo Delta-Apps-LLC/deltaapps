@@ -74,14 +74,14 @@ export default {
         {
             avatar: 'icon.png',
             title: 'Acorns for Charity',
-            description: 'Connect your bank account and round up all your purchases to donate to charity.',
-            link: 'https://google.com'
+            description: 'Connect your bank account and round up all your purchases to donate to charity.\n(Not yet made)',
+            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
         },
         {
             avatar: 'icon.png',
             title: 'Family Organizer',
             description: 'Manage chores, responsibilities, calendars, and rewards for your family!',
-            link: 'https://google.com'
+            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
         },
         {
             avatar: 'goat-notes-logo.png',

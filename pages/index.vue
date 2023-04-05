@@ -42,6 +42,9 @@
 </template>
 
 <script>
+import Logo from "~/components/Logo.vue"
+import CarouselComponent from "~/components/CarouselComponent.vue"
+
 export default {
   name: 'IndexPage',
 
@@ -57,6 +60,12 @@ export default {
     setTimeout( async () => {
       await this.$store.commit('animation/setHasAnimated', true)
     }, 3000);
+  },
+
+
+  components: {
+    Logo,
+    CarouselComponent,
   },
 
   data () {
