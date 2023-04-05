@@ -4,6 +4,8 @@
       <h2>How It Started</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <p>In the beginning God created the heavens and the earth.</p>
+      <hr :style="{'height': '3px', 'border-radius': '2x', 'background-color': '#dddddd'}">
+      <CarouselComponent/>
     </v-col>
     
     <Logo id="logo" />
@@ -12,6 +14,8 @@
 
 <script>
 import Logo from "~/components/Logo.vue"
+import CarouselComponent from "~/components/CarouselComponent.vue"
+
 export default {
   name: 'IndexPage',
 
@@ -28,6 +32,7 @@ export default {
 
   components: {
     Logo,
+    CarouselComponent,
   },
 
   data () {

@@ -54,7 +54,7 @@ export default {
             link: 'https://penguinboard.app'
         },
         {
-            avatar: 'v.png',
+            avatar: 'maupin-homes-logo.png',
             title: 'Maupin Homes',
             description: 'Freelance web development for Maupin Homes, LLC',
             link: 'https://maupinhomesco.com'

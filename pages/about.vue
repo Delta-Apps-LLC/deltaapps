@@ -110,7 +110,8 @@ a {
 }
 
 .team-card {
-  background-color: #2B2E36;
+  /* background-color: #2B2E36; */
+  background-color: white;
   margin-right: 20px;
   margin-bottom: 20px;
 }
@@ -131,7 +132,8 @@ a {
   font-size: 16px;
   line-height: 150%;
   text-align: center;
-  color: #eaeaea;
+  /* color: #eaeaea; */
+  color: #1a1e2d;
 }
 
 .role-text {
@@ -140,7 +142,8 @@ a {
   /* font-weight: 600; */
   font-size: 15px;
   line-height: 150%;
-  color: #eaeaea;
+  /* color: #eaeaea; */
+  color: #1a1e2d;
 }
 
 .background-row {
