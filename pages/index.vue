@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col>
+    <v-col class="text-center">
       <h1 class="tagline text-center"
         :class="{'active': headingActive}"
         :key="headingKey"
@@ -15,10 +15,29 @@
       >
         Here to Make a Difference
       </h1>
-      <h2>How It Started</h2>
-      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
-    </v-col>
 
+      <p class="description">
+        Home to full scale web applications, mobile applications, and freelanced business websites, Delta Apps is committed to making a difference in the world through technology. Outsource your development needs to us or browse the variety of <nuxt-link to="/products">products we offer</nuxt-link>.
+      </p>
+
+      <h2 class="text-center">
+        Our Guarantee:<br v-if="isMobile">{{isMobile ? null : '&ensp;'}} A Positive 
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <span v-on="on" v-bind="attrs">&ldquo;Delta&rdquo;</span>
+          </template>
+          <span>Delta &ndash; &Delta; (Greek)</span><br>
+          <span>&ldquo;To represent a change&rdquo;</span>
+        </v-tooltip>
+      </h2>
+
+      <v-btn
+        class="button"
+        to="/contact"
+      >
+        Get in touch
+      </v-btn>
+    </v-col>
   </v-row>
 </template>
 
@@ -76,6 +95,11 @@ h1 {
   margin: 20px;
 }
 
+h2 {
+  margin: 40px;
+  letter-spacing: 2.5px;
+}
+
 .tagline {
   transform: scaleX(0);
   transform-origin: center;
@@ -84,6 +108,21 @@ h1 {
 
 .tagline.active {
   transform: scaleX(1);
+}
+
+.description {
+  margin: 30px auto;
+  width: 90%;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.button {
+  width: 50%;
+  padding: 30px !important;
+  font-size: 20px !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
 }
 
 </style>

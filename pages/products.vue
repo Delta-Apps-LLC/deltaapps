@@ -11,7 +11,7 @@
             width="300px"
         > <!-- color="#2f3453" -->
             <v-card-title class="text-center">
-                <v-avatar>
+                <v-avatar size="60">
                     <v-icon v-if="product.avatar === null">mdi-account-circle</v-icon>
                     <img v-else :src="product.avatar" />
                 </v-avatar>
@@ -25,7 +25,7 @@
             <v-card-actions>
                 <v-spacer />
                 <a target="_blank" :href="product.link" style="text-decoration: none;">
-                    <v-btn class="site-btn">Visit Site</v-btn>
+                    <v-btn class="button">Visit Site</v-btn>
                 </a>
                 <v-spacer />
             </v-card-actions>
@@ -48,43 +48,43 @@ export default {
       windowWidth: window.innerWidth,
       products: [
         {
-            avatar: 'icon.png',
+            avatar: 'penguin-logo.png',
             title: 'Penguin Board',
             description: 'Virtual Greeting Cards',
             link: 'https://penguinboard.app'
         },
         {
-            avatar: 'v.png',
+            avatar: 'maupin-homes-logo.jpg',
             title: 'Maupin Homes',
             description: 'Freelance web development for Maupin Homes, LLC',
             link: 'https://maupinhomesco.com'
         },
         {
-            avatar: 'vuetify-logo.svg',
+            avatar: 'write-now-logo.png',
             title: 'Write Now',
             description: 'Online journal with shareable daily prompts',
             link: 'https://joinwritenow.com'
         },
         {
-            avatar: null,
+            avatar: 'make-me-quit-logo.png',
             title: 'Make Me Quit',
             description: 'Platform for tech employees to set preferences for future job offers.',
             link: 'https://makemequit.dev'
         },
         {
-            avatar: null,
+            avatar: 'icon.png',
             title: 'Acorns for Charity',
             description: 'Connect your bank account and round up all your purchases to donate to charity.',
             link: 'https://google.com'
         },
         {
-            avatar: null,
-            title: 'Family Management',
+            avatar: 'icon.png',
+            title: 'Family Organizer',
             description: 'Manage chores, responsibilities, calendars, and rewards for your family!',
             link: 'https://google.com'
         },
         {
-            avatar: null,
+            avatar: 'goat-notes-logo.png',
             title: 'Goat Notes',
             description: 'Note taking combined with flashcards!',
             link: 'https://goatnotes.net'
@@ -115,6 +115,7 @@ export default {
 .card {
     margin-right: 15px;
     margin-top: 15px;
+    /* background-color: #5b5e7a; */
 }
 
 .title {
@@ -129,10 +130,9 @@ export default {
     font-family: 'Aileron Regular', sans-serif !important;
 }
 
-.site-btn {
+.button {
     font-family: 'Aileron Regular', sans-serif !important;
-    color: #f1f2fa;
-    background-color: #233bfa !important;
+    /* color: #f1f2fa; */
 }
 
 </style>

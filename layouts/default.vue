@@ -55,7 +55,7 @@
 
     </v-app-bar>
 
-    <v-main class="main-fade" id="main">
+    <v-main class="main">
       <v-container class="main">
         <Nuxt class="main" />
       </v-container>
@@ -65,11 +65,10 @@
       absolute
       app
     >
-      <span class="footer">&copy; {{ new Date().getFullYear() }} Delta Apps</span>
-      &nbsp;&nbsp;&nbsp;
+      <span>&copy; 2023 Delta Apps, LLC</span>
       <!-- <a class="footer" target="_blank" href="privacy_policy.pdf">Privacy Policy</a> -->
       <v-spacer />
-      <span class="footer">{{contact}}</span>
+      <span>Contact Us &ndash; <a href="mailto:deltaappsteam@gmail.com">deltaappsteam@gmail.com</a></span>
     </v-footer>
 
     <Logo id="logo" />
@@ -118,7 +117,6 @@ export default {
           to: '/contact',
         },
       ],
-      contact: 'Contact Us - thibaudeauapps@gmail.com'
     }
   },
 
@@ -158,7 +156,7 @@ export default {
   margin-left: 10px;
   height: 50px !important;
   font-size: 16px;
-  font-family: 'Aileron Regular', sans-serif !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
   color: #f1f2fa;
 }
 
