@@ -48,7 +48,7 @@ export default {
       windowWidth: window.innerWidth,
       products: [
         {
-            avatar: 'penguin-logo.png',
+            avatar: 'penguin-logo-mint.png',
             title: 'Penguin Board',
             description: 'Virtual Greeting Cards',
             link: 'https://penguinboard.app'
