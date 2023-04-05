@@ -1,8 +1,49 @@
 <template>
-  <v-row justify="center" align="center">
+  <v-row justify="center" align="center" style="color: #F4F6FC;">
     <v-col>
       <h2>Contact Us</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+      <div  style="text-align: center;">
+        <span class="about-header">Reach Out!</span>
+        <v-spacer />
+        <div class="reach-out-text">
+          <span>We would love to hear from you! Feel free to share suggestions, feedback, and excitement.</span>
+        </div>
+        <!-- Form -->
+        <v-row justify="center">
+          <v-card class="form-card">
+            <div class="form-content"
+              :style="{'margin': isMobile ? '30px 20px' : null}"
+            >
+              <form class="form-content"
+                :action="'https://submit-form.com/5zSoLWvH'"
+                :style="{'margin': isMobile ? '30px 20px' : null}"
+              >
+                <!-- <input type="hidden" name="_redirect" value="https://makemequit.dev/about" /> -->
+                <v-row>
+                  <input type="text" class="text-field" v-model="name" name="name" placeholder="Name" required>
+                  <input type="email" class="text-field" v-model="email" name="email" placeholder="Email" required>
+                </v-row>
+                <textarea type="text"
+                  class="text-area"
+                  v-model="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your message here..."
+                  required
+                ></textarea>
+                <v-btn
+                  class="send-btn"
+                  type="submit"
+                >
+                  Send
+                  <v-icon right>mdi-send</v-icon>
+                </v-btn>
+              </form>
+            </div>
+          </v-card>
+        </v-row>
+      </div>
     </v-col>
   </v-row>
 </template>
@@ -10,6 +51,15 @@
 <script>
 export default {
   name: 'ContactPage',
+
+  data() {
+    return {
+      reachOut: 'We would love to hear from you! Feel free to share suggestions, feedback, and excitement.',
+      name: '',
+      email: '',
+      message: '',
+    }
+  },
 
   created () {
     window.addEventListener('resize', this.resizeHandler)
@@ -40,5 +90,78 @@ export default {
 <style scoped>
 @import '~/assets/style.css';
 
+.about-header {
+  /* margin-top: 10px; */
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 150%;
+  /* identical to box height */
+  text-align: center;
+  /* background: linear-gradient(134.94deg, #233DFF 4.82%, #4986FF 29.27%, #A4B9FF 56.61%, #E2E6FC 70.28%, #F4F6FC 78.15%); */
+  background: #F4F6FC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+}
+
+.reach-out-text {
+  width: 325px;
+  display: inline-block;
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: #eaeaea;
+}
+
+.form-card {
+  margin: 50px 0px;
+  justify-content: center;
+  background: #2B2E36;
+  border-radius: 6px;
+  width: 700px;
+}
+
+.form-content {
+  margin: 30px 50px;
+  display: grid;
+}
+
+.text-field {
+  width: 46%;
+  margin: 2%;
+  padding: 6px 6px;
+  background-color: #fcfcfc !important;
+  border-style: solid;
+  border-width: 3px;
+  border-image: linear-gradient(134.94deg, #233DFF 4.82%, #4986FF 29.27%, #A4B9FF 56.61%, #E2E6FC 70.28%, #F4F6FC 78.15%) 1;
+}
+
+.text-area {
+  border-style: solid;
+  border-width: 3px;
+  border-image: linear-gradient(134.94deg, #233DFF 4.82%, #4986FF 29.27%, #A4B9FF 56.61%, #E2E6FC 70.28%, #F4F6FC 78.15%) 1;
+  background-color: #fcfcfc !important;
+  margin: 10px 0px;
+  padding: 6px 6px;
+}
+
+.send-btn {
+  justify-self: end;
+  background-color: #5CB6F9 !important;
+  border-radius: 6px;
+  width: 150px;
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+}
 
 </style>
