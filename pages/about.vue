@@ -1,11 +1,6 @@
 <template>
   <v-row justify="center" align="center">
     <v-col>
-
-      <h2>Who We Are</h2>
-      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
-      
-      <h2>How It Started</h2>
       <h1>About Us</h1>
 
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
