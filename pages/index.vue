@@ -1,42 +1,63 @@
 <template>
   <v-row justify="center" align="center">
     <v-col class="text-center">
-      <h1 class="tagline text-center"
-        :class="{'active': headingActive}"
-        :key="headingKey"
-        :style="{'font-size': isMobile ? null : '45px'}"
-        v-if="!animated"
-      >
-        Here to Make a Difference
-      </h1>
-      <h1 class="text-center"
-        v-if="animated"
-        :style="{'font-size': isMobile ? null : '45px'}"
-      >
-        Here to Make a Difference
-      </h1>
+      <div data-aos="fade-up">
+        <h1 class="tagline text-center"
+          :class="{'active': headingActive}"
+          :key="headingKey"
+          :style="{'font-size': isMobile ? null : '45px'}"
+          v-if="!animated"
+        >
+          Here to Make a Difference
+        </h1>
+        <h1 class="text-center"
+          v-if="animated"
+          :style="{'font-size': isMobile ? null : '45px'}"
+        >
+          Here to Make a Difference
+        </h1>
 
-      <p class="description">
-        Home to full scale web applications, mobile applications, and freelanced business websites, Delta Apps is committed to making a difference in the world through technology. Outsource your development needs to us or browse the variety of <nuxt-link to="/products">products we offer</nuxt-link>.
-      </p>
+        <p class="description">
+          At Delta Apps, we are committed to making a difference in the world through technology. Home to all kinds of software development services, you can outsource your development needs to us or browse the variety of <nuxt-link to="/products">products we offer</nuxt-link>.
+        </p>
 
-      <h2 class="text-center">
-        Our Guarantee:<br v-if="isMobile">{{isMobile ? null : '&ensp;'}} A Positive 
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-            <span v-on="on" v-bind="attrs">&ldquo;Delta&rdquo;</span>
-          </template>
-          <span>Delta &ndash; &Delta; (Greek)</span><br>
-          <span>&ldquo;To represent a change&rdquo;</span>
-        </v-tooltip>
-      </h2>
+        <h2 class="text-center">
+          Our Guarantee:<br v-if="isMobile">{{isMobile ? null : '&ensp;'}} A Positive 
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <span v-on="on" v-bind="attrs">&ldquo;Delta&rdquo;</span>
+            </template>
+            <span>Delta &ndash; &Delta; (Greek)</span><br>
+            <span>&ldquo;To represent a change&rdquo;</span>
+          </v-tooltip>
+        </h2>
+      </div>
 
       <v-btn
         class="button"
         to="/contact"
+        data-aos="fade-down"
       >
         Get in touch
       </v-btn>
+
+      <h2 style="margin-top: 40px; margin-bottom: 2px;" data-aos="fade-up">Our Services</h2>
+      <hr data-aos="fade-up" :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+      <v-spacer style="margin-top: 1%;"/>
+
+      <v-row class="services-row" justify="center">
+        <v-card class="services-card"
+          v-for="(service, i) in services"
+          :key="i"
+          :data-aos="i == 0 ? 'fade-right' : i == 1 ? 'fade-up' : 'fade-left'"
+        >
+          <v-card-text class="service-title">{{service.title}}</v-card-text>
+          <v-card-text>
+            <v-icon class="services-icon" size="50">{{service.image}}</v-icon>
+          </v-card-text>
+          <v-card-text class="service-description">{{service.description}}</v-card-text>
+        </v-card>
+      </v-row>
     </v-col>
   </v-row>
 </template>
@@ -44,9 +65,11 @@
 <script>
 import Logo from "~/components/Logo.vue"
 import CarouselComponent from "~/components/CarouselComponent.vue"
+import aosMixin from '~/mixins/aos'
 
 export default {
   name: 'IndexPage',
+  mixins: [aosMixin],
 
   created () {
     window.addEventListener('resize', this.resizeHandler)
@@ -62,7 +85,6 @@ export default {
     }, 3000);
   },
 
-
   components: {
     Logo,
     CarouselComponent,
@@ -73,6 +95,23 @@ export default {
       windowWidth: window.innerWidth,
       headingKey: 0,
       headingActive: false,
+      services: [
+        {
+          title: 'Mobile Applications',
+          image: 'mdi-cellphone',
+          description: 'Our mobile apps, primarily built with the Flutter framework, are available on the Google Play Store and Apple App Store.'
+        },
+        {
+          title: 'Web Applications',
+          image: 'mdi-web',
+          description: 'Our web apps, primarily built with NuxtJS, are available for use and will make a positive impact.'
+        },
+        {
+          title: 'Freelance Development',
+          image: 'mdi-code-braces',
+          description: 'We are ready to work with you on whatever needs you have! No matter the ask, we guarantee high-quality products.'
+        },
+      ]
     }
   },
 
@@ -119,19 +158,40 @@ h2 {
   transform: scaleX(1);
 }
 
-.description {
-  margin: 30px auto;
-  width: 90%;
-  text-align: center;
-  font-size: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 .button {
   width: 50%;
   padding: 30px !important;
   font-size: 20px !important;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+.services-row {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.services-card {
+  width: 250px;
+  margin: 20px;
+}
+
+.service-title {
+  color: #f1f2fa;
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.service-description {
+  color: #f1f2fa;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.services-icon {
+  background-image: linear-gradient(to bottom, #233bfa, #5bb3fa);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 </style>

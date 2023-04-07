@@ -9,7 +9,8 @@
             v-for="(product, i) in products"
             :key="i"
             width="300px"
-        > <!-- color="#2f3453" -->
+            data-aos="fade-up"
+        >
             <v-card-title class="text-center">
                 <v-avatar size="60">
                     <v-icon v-if="product.avatar === null">mdi-account-circle</v-icon>
@@ -36,8 +37,10 @@
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 export default {
   name: 'ProductsPage',
+  mixins: [aosMixin],
 
   created () {
     window.addEventListener('resize', this.resizeHandler)
@@ -54,15 +57,9 @@ export default {
             link: 'https://penguinboard.app'
         },
         {
-            avatar: 'maupin-homes-logo.jpg',
-            title: 'Maupin Homes',
-            description: 'Freelance web development for Maupin Homes, LLC',
-            link: 'https://maupinhomesco.com'
-        },
-        {
             avatar: 'write-now-logo.png',
             title: 'Write Now',
-            description: 'Online journal with shareable daily prompts',
+            description: 'Online journal with daily shareable prompts',
             link: 'https://joinwritenow.com'
         },
         {
@@ -74,13 +71,13 @@ export default {
         {
             avatar: 'icon.png',
             title: 'Acorns for Charity',
-            description: 'Connect your bank account and round up all your purchases to donate to charity.\n(Not yet made)',
+            description: 'Connect your bank account and round up all your purchases to donate to charity.\n(Coming soon)',
             link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
         },
         {
             avatar: 'icon.png',
             title: 'Family Organizer',
-            description: 'Manage chores, responsibilities, calendars, and rewards for your family!',
+            description: 'Manage chores, responsibilities, calendars, and rewards for your family!\n(Coming soon)',
             link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
         },
         {
@@ -88,7 +85,13 @@ export default {
             title: 'Goat Notes',
             description: 'Note taking combined with flashcards!',
             link: 'https://goatnotes.net'
-        }
+        },
+        {
+            avatar: 'maupin-homes-logo.jpg',
+            title: 'Maupin Homes',
+            description: 'Freelance web development for Maupin Homes, LLC',
+            link: 'https://maupinhomesco.com'
+        },
       ],
     }
   },

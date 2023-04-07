@@ -1,58 +1,77 @@
 <template>
   <v-row justify="center" align="center">
     <v-col>
-      <h1>About Us</h1>
-
+      <h2>How It Started</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
-
       <v-spacer style="margin-top: 1%;"/>
 
-      <h2>What to expect next</h2>
-      <ul>
-        <li>We are currently finishing Penguin Board's payment system</li>
-        <li>MakeMeQuit will be next on our agenda</li>
-      </ul>
-
-      <v-spacer style="margin-top: 1%;"/>
-
-      <h2>Who we are</h2>
-      <h3>
-        The two founders of Delta Apps are 
+      <p class="description" data-aos="fade-left">
+        Delta Apps was founded by 
         <a href="https://www.linkedin.com/in/andrew-thibaudeau/">Andrew Thibaudeau</a> and 
         <a href="https://www.linkedin.com/in/travisreynertson/">Travis Reynertson</a>. 
-        Both of us are BYU students that met in the Marriott School's Sandbox Program, a Y Combinator like program. 
-        It was during this time that we made our first products.
-      </h3>
+        We started as BYU students that met in the Marriott School's 
+        <a href="https://creators.byu.edu/sandbox">Sandbox Program</a>, 
+        a Y Combinator-like program. It was during this time that we first learned about entrepreneurship and 
+        created our first products.
+      </p>
+      <p class="description" data-aos="fade-right">
+        We struggled throughout the school year to find traction among our many 
+        ideas, but we eventually found mutual passion in creating software applications that would make a 
+        difference in peoples lives. This began the birth of what is now Delta Apps.
+      </p>
 
+      <h2>Who We Are</h2>
+      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <v-spacer style="margin-top: 1%;"/>
 
-      <h2>What we strive for</h2>
-      <h3>We strive to utilize technology to build platforms and resources to help make a lasting positive impact.</h3>
-
-      <v-spacer style="margin-top: 1%;"/>
-
-      <v-row class="picture-row text-center" justify="center" align="center">
-        <v-card class="team-card"
-          v-for="(person, i) in team" :key="i"
-          width="200px"
-        >
-          <div class="team-card-content">
-            <img class="team-img" :src="require(`~/assets/images/${person.imgBlob}`)" />
+      <v-row class="picture-row text-center" justify="center" align="top">
+        <v-col class="picture-col" v-for="(person, i) in team" :key="i">
+            <img class="team-img"
+                :src="require(`~/assets/images/${person.imgBlob}`)"
+                :data-aos="i == 0 ? 'fade-right' : 'fade-left'"
+            />
             <v-spacer />
-            <span class="name-text">{{person.name}}</span>
-            <v-spacer />
-            <span class="role-text">{{person.role}}</span>
-          </div>
-        </v-card>
+            <div :data-aos="i == 0 ? 'fade-right' : 'fade-left'">
+                <span class="name-text">{{person.name}}</span>
+                <v-spacer />
+                <span class="role-text">{{person.title}}</span>
+                <v-spacer />
+                <span class="role-text">{{person.role}}</span>
+            </div>
+            <hr data-aos="fade-up" :style="{'height': '1px', 'border-radius': '10px', 'background-color': '#dddddd'}">
+            <p class="intro" :data-aos="i == 0 ? 'fade-up-right' : 'fade-up-left'">{{person.intro}}</p>
+        </v-col>
       </v-row>
+
+      <h2>Our Mission</h2>
+      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+      <v-spacer style="margin-top: 1%;"/>
+
+      <p class="description" data-aos="fade-up">
+        We strive to utilize technology to build platforms and resources to help make a lasting positive impact. This desire is derived from our name. In mathematics, the term &ldquo;delta&rdquo; is defined as the difference or change between two variables. Our desire is similar. We want the delta between your life without our products verses your life with our products to be drastically positive. If we fail in that endeavor, help us know what we can do to make your life better!
+      </p>
+
+      <h2>Coming Soon</h2>
+      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+      <v-spacer style="margin-top: 1%;"/>
+
+      <ul class="description">
+        <li data-aos="fade-left">We are currently finishing Penguin Board's payment system</li>
+        <li data-aos="fade-right">Write Now will be redeployed and ready for use</li>
+        <li data-aos="fade-left">The full-scale portal for Make Me Quit is next on our agenda</li>
+        <li data-aos="fade-right">Acorns for Charity will soon be under development</li>
+        <li data-aos="fade-left">The Family Organizer will soon be under development</li>
+      </ul>
 
     </v-col>
   </v-row>
 </template>
 
 <script>
+import aosMixin from '~/mixins/aos'
 export default {
   name: 'AboutPage',
+  mixins: [aosMixin],
 
   created () {
     window.addEventListener('resize', this.resizeHandler)
@@ -67,12 +86,16 @@ export default {
           img: 'andrew.jpg',
           imgBlob: 'andrew-blob.png',
           role: 'Software Engineer',
+          title: 'Co-Founder',
+          intro: 'Andrew was born and raised in Minnesota. At a young age, he was fascinated by technology and knew he wanted to learn how it all works. Though starting his college career in Computer Engineering, he quickly discovered Information Technology and fell in love with all the possibilities that path held. He loves seeing his creations come to life in front of his eyes through mobile and web applications, and wants to use those skills to make life easier for everyone. He is a husband and father to a beautiful wife and wonderful son.',
         },
         {
           name: 'Travis Reynertson',
           img: 'travis.jpg',
           imgBlob: 'travis-blob.png',
           role: 'Software Engineer',
+          title: 'Co-Founder',
+          intro: '',
         },
       ]
     }
@@ -97,54 +120,45 @@ export default {
 <style scoped>
 @import '~/assets/style.css';
 
-h3, li {
-  font-size: 20px;
-  font-weight: bold;
+.description {
+    text-align: left;
+    /* margin: 20px 0px; */
 }
 
 a {
   color: white !important;
 }
 
-.picture-row {
-  margin-top: 40px;
-}
-
-.team-card {
-  /* background-color: #2B2E36; */
-  background-color: white;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.team-card-content {
-  margin: 20px 0px;
+.picture-col {
+    margin: 20px 20px;
 }
 
 .team-img {
-  /* border-radius: 50%; */
-  width: 150px;
+  width: 175px;
+  margin: 0 auto;
 }
 
 .name-text {
-  font-family: 'Lexend Deca';
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 150%;
   text-align: center;
-  /* color: #eaeaea; */
-  color: #1a1e2d;
+  color: #f1f2fa;
 }
 
 .role-text {
-  font-family: 'Lexend Deca';
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-style: normal;
-  /* font-weight: 600; */
-  font-size: 15px;
+  font-size: 20px;
   line-height: 150%;
-  /* color: #eaeaea; */
-  color: #1a1e2d;
+  color: #f1f2fa;
+}
+
+.intro {
+    margin: 20px 20px;
+    font-size: 17px;
 }
 
 .background-row {
