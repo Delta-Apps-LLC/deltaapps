@@ -4,7 +4,10 @@
       <h2>Contact Us</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <div style="text-align: center;">
-        <div class="description" data-aos="fade-right">
+        <div class="description"
+          data-aos="fade-right"
+          :style="{'width': isMobile ? '300px' : '500px'}"
+        >
           <span>
             We would love to hear from you! Feel free to share suggestions, feedback, and excitement.
           </span>
@@ -12,9 +15,9 @@
 
         <!-- Form -->
         <v-row justify="center" data-aos="fade-left">
-          <v-card class="form-card">
+          <v-card class="form-card" :style="{'width': isMobile ? '90%' : null}">
             <div class="form-content"
-              :style="{'margin': isMobile ? '30px 20px' : null}"
+              :style="{'margin': isMobile ? '10px' : null}"
             >
               <form class="form-content"
                 :action="'https://submit-form.com/d3Vbd7FJ'"
@@ -93,7 +96,6 @@ export default {
 @import '~/assets/style.css';
 
 .description {
-  width: 50% !important;
   margin: 30px auto;
 }
 
@@ -113,7 +115,7 @@ export default {
 .text-field {
   width: 46%;
   margin: 2%;
-  padding: 6px 6px;
+  padding: 6px;
   background-color: #fcfcfc !important;
   border-style: solid;
   border-width: 3px;
@@ -126,7 +128,7 @@ export default {
   border-image: linear-gradient(134.94deg, #233DFF 4.82%, #4986FF 29.27%, #A4B9FF 56.61%, #E2E6FC 70.28%, #F4F6FC 78.15%) 1;
   background-color: #fcfcfc !important;
   margin: 10px 0px;
-  padding: 6px 6px;
+  padding: 6px;
 }
 
 .send-btn {
