@@ -87,7 +87,7 @@ export default {
           imgBlob: 'andrew-blob.png',
           role: 'Software Engineer',
           title: 'Co-Founder',
-          intro: 'Andrew was born and raised in Minnesota. At a young age, he was fascinated by technology and knew he wanted to learn how it all works. Though starting his college career in Computer Engineering, he quickly discovered Information Technology and fell in love with all the possibilities that path held. He loves seeing his creations come to life in front of his eyes through mobile and web applications, and wants to use those skills to make life easier for everyone. He is a husband and father to a beautiful wife and wonderful son.',
+          intro: 'Andrew was born and raised in Minnesota. From a young age, he was fascinated by technology and knew he wanted to learn how it all works. Though starting his college career in Computer Engineering, he quickly discovered Information Technology and fell in love with all the possibilities that path held. He loves seeing his creations come to life in front of his eyes through mobile and web applications, and wants to use those skills to make life easier for everyone. He is a husband and father to a beautiful wife and wonderful son.',
         },
         {
           name: 'Travis Reynertson',
