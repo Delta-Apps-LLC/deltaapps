@@ -95,7 +95,7 @@ export default {
           imgBlob: 'travis-blob.png',
           role: 'Software Engineer',
           title: 'Co-Founder',
-          intro: '',
+          intro: 'Travis is a California native with a passion for the great outdoors and a wide range of adventurous activities. From rock climbing and mountain biking to surfing and tennis.\nIn addition to his outdoor pursuits, Travis is a talented student who is currently pursuing a bachelor\'s degree in Computer Engineering with minors in Mathematics, Computer Science, and Entrepreneurship. He is determined to use his skills to make a positive impact in the world.\nWhen he\'s not busy studying, Travis enjoys traveling and visiting new places and experiencing different cultures firsthand.',
         },
       ]
     }
