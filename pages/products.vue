@@ -70,13 +70,13 @@ export default {
         },
         {
             avatar: 'icon.png',
-            title: 'Acorns for Charity',
+            title: 'Easy Aid',
             description: 'Connect your bank account and round up all your purchases to donate to charity.\n(Coming soon)',
             link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
         },
         {
             avatar: 'icon.png',
-            title: 'Family Organizer',
+            title: 'Homebase',
             description: 'Manage chores, responsibilities, calendars, and rewards for your family!\n(Coming soon)',
             link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
         },
