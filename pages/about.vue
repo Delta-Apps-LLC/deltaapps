@@ -59,8 +59,8 @@
         <li data-aos="fade-left">We are currently finishing Penguin Board's payment system</li>
         <li data-aos="fade-right">Write Now will be redeployed and ready for use</li>
         <li data-aos="fade-left">The full-scale portal for Make Me Quit is next on our agenda</li>
-        <li data-aos="fade-right">Acorns for Charity will soon be under development</li>
-        <li data-aos="fade-left">The Family Organizer will soon be under development</li>
+        <li data-aos="fade-right">Easy Aid will soon be under development</li>
+        <li data-aos="fade-left">Homebase will soon be under development</li>
       </ul>
 
     </v-col>
