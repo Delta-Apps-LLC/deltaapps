@@ -8,13 +8,13 @@
           :style="{'font-size': isMobile ? null : '45px'}"
           v-if="!animated"
         >
-          Here to Make a Difference
+          Make a Difference Through Technology
         </h1>
         <h1 class="text-center"
           v-if="animated"
           :style="{'font-size': isMobile ? null : '45px'}"
         >
-          Here to Make a Difference
+          Make a Difference Through Technology
         </h1>
 
         <p class="description">
@@ -104,7 +104,7 @@ export default {
         {
           title: 'Web Applications',
           image: 'mdi-web',
-          description: 'Our web apps, primarily built with NuxtJS, are available for use and will make a positive impact.'
+          description: 'Our web apps, primarily built with the NuxtJS framework, are available for use.'
         },
         {
           title: 'Freelance Development',

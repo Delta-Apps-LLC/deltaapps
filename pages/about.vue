@@ -48,7 +48,7 @@
       <v-spacer style="margin-top: 1%;"/>
 
       <p class="description" data-aos="fade-up">
-        We strive to utilize technology to build platforms and resources to help make a lasting positive impact. This desire is derived from our name. In mathematics, the term &ldquo;delta&rdquo; is defined as the difference or change between two variables. Our desire is similar. We want the delta between your life without our products verses your life with our products to be drastically positive. If we fail in that endeavor, help us know what we can do to make your life better!
+        We strive to utilize technology to build platforms and resources to help make a lasting positive impact. This desire is derived from our name. In mathematics, the term &ldquo;delta&rdquo; is defined as the difference or change between two variables. Our desire is similar. The apps that we build are centered in three categories: Productivity, Self-Improvement, and Social Good. We want the delta between your life without our products verses your life with our products to be drastically positive. If we fail in that endeavor, help us know what we can do to make your life better!
       </p>
 
       <h2>Coming Soon</h2>
