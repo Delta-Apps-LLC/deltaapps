@@ -41,7 +41,7 @@
         Get in touch
       </v-btn>
 
-      <h2 style="margin-top: 40px; margin-bottom: 2px;" data-aos="fade-up">Our Services</h2>
+      <h2 style="margin-top: 30px; margin-bottom: 2px;" data-aos="fade-up">Our Services</h2>
       <hr data-aos="fade-up" :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <v-spacer style="margin-top: 1%;"/>
 
@@ -58,6 +58,13 @@
           <v-card-text class="service-description">{{service.description}}</v-card-text>
         </v-card>
       </v-row>
+
+      <v-btn
+        class="button"
+        to="/about"
+      >
+        Learn More
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -160,6 +167,7 @@ h2 {
 
 .button {
   width: 50%;
+  margin-bottom: 20px;
   padding: 30px !important;
   font-size: 20px !important;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;

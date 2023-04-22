@@ -57,6 +57,7 @@
 
     <v-main class="main">
       <v-container class="main">
+        <DonateButton @click="donate()" />
         <Nuxt class="main" />
       </v-container>
     </v-main>
@@ -77,6 +78,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import DonateButton from '~/components/DonateButton.vue'
 export default {
   name: 'DefaultLayout',
 
@@ -93,6 +95,7 @@ export default {
 
   components: {
     Logo,
+    DonateButton,
   },
 
   data () {
@@ -123,6 +126,10 @@ export default {
   methods: {
     toHome() {
       this.$router.push('/')
+    },
+    
+    donate() {
+      window.open('https://donate.stripe.com/test_8wMaGxgvnatS7wkdQQ')
     },
 
     resizeHandler() {
