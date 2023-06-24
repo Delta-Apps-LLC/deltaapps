@@ -37,12 +37,12 @@ export default {
   /* background-color: #233bfa; */
   background-image: linear-gradient(to bottom, #233bfa, #5bb3fa);
   color: #f1f2fa;
-  padding: 16px;
+  padding: 20px;
   border: none;
   border-radius: 50%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
 }
 

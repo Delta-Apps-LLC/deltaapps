@@ -1,9 +1,10 @@
 <template>
   <v-row justify="center" align="center">
     <v-col>
+      <!-- Products -->
       <h2>Our Products</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
-      <v-row justify="center" style="margin: 10px;">
+      <v-row justify="center" style="margin: 20px;">
         <v-card
             class="card"
             v-for="(product, i) in products"
@@ -13,8 +14,7 @@
         >
             <v-card-title class="text-center">
                 <v-avatar size="60">
-                    <v-icon v-if="product.avatar === null">mdi-account-circle</v-icon>
-                    <img v-else :src="product.avatar" />
+                  <img :src="product.avatar" />
                 </v-avatar>
                 <span class="title">{{product.title}}</span>
             </v-card-title>
@@ -26,6 +26,38 @@
             <v-card-actions>
                 <v-spacer />
                 <a target="_blank" :href="product.link" style="text-decoration: none;">
+                    <v-btn class="button">Visit Site</v-btn>
+                </a>
+                <v-spacer />
+            </v-card-actions>
+        </v-card>
+      </v-row>
+
+      <!-- Clients -->
+      <h2>Our Clients</h2>
+      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+      <v-row justify="center" style="margin: 10px;">
+        <v-card
+            class="card"
+            v-for="(client, i) in clients"
+            :key="i"
+            width="300px"
+            data-aos="fade-up"
+        >
+            <v-card-title class="text-center">
+                <v-avatar size="60">
+                  <img :src="client.avatar" />
+                </v-avatar>
+                <span class="title">{{client.title}}</span>
+            </v-card-title>
+
+            <v-card-subtitle class="description text-center">
+                {{client.description}}
+            </v-card-subtitle>
+
+            <v-card-actions>
+                <v-spacer />
+                <a target="_blank" :href="client.link" style="text-decoration: none;">
                     <v-btn class="button">Visit Site</v-btn>
                 </a>
                 <v-spacer />
@@ -53,13 +85,13 @@ export default {
         {
             avatar: 'penguin-logo-mint.png',
             title: 'Penguin Board',
-            description: 'Virtual Greeting Cards',
+            description: 'Customizable virtual greeting cards platform.',
             link: 'https://penguinboard.app'
         },
         {
             avatar: 'write-now-logo.png',
             title: 'Write Now',
-            description: 'Online journal with daily shareable prompts',
+            description: 'Online journal with daily shareable prompts.',
             link: 'https://joinwritenow.com'
         },
         {
@@ -69,30 +101,38 @@ export default {
             link: 'https://makemequit.dev'
         },
         {
-            avatar: 'icon.png',
-            title: 'Easy Aid',
-            description: 'Connect your bank account and round up all your purchases to donate to charity.\n(Coming soon)',
-            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
-        },
-        {
-            avatar: 'icon.png',
-            title: 'Homebase',
-            description: 'Manage chores, responsibilities, calendars, and rewards for your family!\n(Coming soon)',
-            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
-        },
-        {
             avatar: 'goat-notes-logo.png',
             title: 'Goat Notes',
-            description: 'Note taking combined with flashcards!',
+            description: 'Note-taking and studying tool made better with AI.',
             link: 'https://goatnotes.net'
         },
+        {
+            avatar: 'icon.png',
+            title: 'Ripple',
+            description: 'Platform to round up all your purchases to donate to charity.\n(Coming soon)',
+            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
+        },
+        {
+            avatar: 'icon.png',
+            title: 'FamilyHQ',
+            description: 'Platform to manage chores, responsibilities, calendars, and rewards for your family!\n(Coming soon)',
+            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
+        },
+      ],
+      clients: [
         {
             avatar: 'maupin-homes-logo.jpg',
             title: 'Maupin Homes',
             description: 'Freelance web development for Maupin Homes, LLC',
             link: 'https://maupinhomesco.com'
         },
-      ],
+        {
+            avatar: 'kb-facials-logo.png',
+            title: 'KB Facials',
+            description: 'Freelance web development for KB Facials',
+            link: 'https://kbfacials.com'
+        },
+      ]
     }
   },
 
