@@ -60,8 +60,8 @@
         <li data-aos="fade-right">Write Now will be redeployed and ready for use</li>
         <li data-aos="fade-left">GOAT Notes is being updated and redeployed</li>
         <li data-aos="fade-right">The full-scale portal for Make Me Quit will soon be under development</li>
-        <li data-aos="fade-left">Easy Aid will soon be under development</li>
-        <li data-aos="fade-right">Homebase will soon be under development</li>
+        <li data-aos="fade-left">Ripple will soon be under development</li>
+        <li data-aos="fade-right">FamilyHQ will soon be under development</li>
       </ul>
 
     </v-col>
