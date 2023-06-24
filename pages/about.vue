@@ -55,12 +55,13 @@
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <v-spacer style="margin-top: 1%;"/>
 
-      <ul class="description">
+      <ul class="description" style="margin-bottom: 50px">
         <li data-aos="fade-left">We are currently finishing Penguin Board's payment system</li>
         <li data-aos="fade-right">Write Now will be redeployed and ready for use</li>
-        <li data-aos="fade-left">The full-scale portal for Make Me Quit is next on our agenda</li>
-        <li data-aos="fade-right">Easy Aid will soon be under development</li>
-        <li data-aos="fade-left">Homebase will soon be under development</li>
+        <li data-aos="fade-left">GOAT Notes is being updated and redeployed</li>
+        <li data-aos="fade-right">The full-scale portal for Make Me Quit will soon be under development</li>
+        <li data-aos="fade-left">Easy Aid will soon be under development</li>
+        <li data-aos="fade-right">Homebase will soon be under development</li>
       </ul>
 
     </v-col>

@@ -108,13 +108,13 @@ export default {
         },
         {
             avatar: 'icon.png',
-            title: 'Easy Aid',
+            title: 'Ripple',
             description: 'Platform to round up all your purchases to donate to charity.\n(Coming soon)',
             link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
         },
         {
             avatar: 'icon.png',
-            title: 'Homebase',
+            title: 'FamilyHQ',
             description: 'Platform to manage chores, responsibilities, calendars, and rewards for your family!\n(Coming soon)',
             link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
         },
