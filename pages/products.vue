@@ -117,8 +117,8 @@ export default {
             title: 'Goat Notes',
             description: 'Note-taking and studying tool made better with AI.',
             link: 'https://goatnotes.net',
-            privacy: '',
-            terms: ''
+            privacy: 'goatnotes/privacy_policy.pdf',
+            terms: 'goatnotes/terms_conditions.pdf'
         },
         {
             avatar: 'deltaapps/icon.png',
