@@ -30,6 +30,12 @@
                 </a>
                 <v-spacer />
             </v-card-actions>
+
+            <!-- <div class="legal-docs text-center">
+              <a target="_blank" :href="product.privacy">Privacy Policy</a>
+              <span>&ensp;</span>
+              <a target="_blank" :href="product.terms">Terms</a>
+            </div> -->
         </v-card>
       </v-row>
 
@@ -83,51 +89,63 @@ export default {
       windowWidth: window.innerWidth,
       products: [
         {
-            avatar: 'penguin-logo-mint.png',
+            avatar: 'penguinboard/penguin-logo-mint.png',
             title: 'Penguin Board',
             description: 'Customizable virtual greeting cards platform.',
-            link: 'https://penguinboard.app'
+            link: 'https://penguinboard.app',
+            privacy: 'penguinboard/privacy_policy.pdf',
+            terms: 'penguinboard/terms_conditions.pdf'
         },
         {
-            avatar: 'write-now-logo.png',
+            avatar: 'writenow/write-now-logo.png',
             title: 'Write Now',
             description: 'Online journal with daily shareable prompts.',
-            link: 'https://joinwritenow.com'
+            link: 'https://joinwritenow.com',
+            privacy: 'writenow/privacy_policy.pdf',
+            terms: 'writenow/terms_conditions.pdf'
         },
         {
-            avatar: 'make-me-quit-logo.png',
+            avatar: 'makemequit/make-me-quit-logo.png',
             title: 'Make Me Quit',
             description: 'Platform for tech employees to set preferences for future job offers.',
-            link: 'https://makemequit.dev'
+            link: 'https://makemequit.dev',
+            privacy: '',
+            terms: ''
         },
         {
-            avatar: 'goat-notes-logo.png',
+            avatar: 'goatnotes/goat-notes-logo.png',
             title: 'Goat Notes',
             description: 'Note-taking and studying tool made better with AI.',
-            link: 'https://goatnotes.net'
+            link: 'https://goatnotes.net',
+            privacy: '',
+            terms: ''
         },
         {
-            avatar: 'icon.png',
+            avatar: 'deltaapps/icon.png',
             title: 'Ripple',
             description: 'Platform to round up all your purchases to donate to charity.\n(Coming soon)',
-            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
+            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6',
+            privacy: '',
+            terms: ''
         },
         {
-            avatar: 'icon.png',
+            avatar: 'deltaapps/icon.png',
             title: 'FamilyHQ',
             description: 'Platform to manage chores, responsibilities, calendars, and rewards for your family!\n(Coming soon)',
-            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6'
+            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6',
+            privacy: '',
+            terms: ''
         },
       ],
       clients: [
         {
-            avatar: 'maupin-homes-logo.jpg',
+            avatar: 'maupinhomes/maupin-homes-logo.jpg',
             title: 'Maupin Homes',
             description: 'Freelance web development for Maupin Homes, LLC',
             link: 'https://maupinhomesco.com'
         },
         {
-            avatar: 'kb-facials-logo.png',
+            avatar: 'kbfacials/kb-facials-logo.png',
             title: 'KB Facials',
             description: 'Freelance web development for KB Facials',
             link: 'https://kbfacials.com'
@@ -176,6 +194,10 @@ export default {
 .button {
     font-family: 'Aileron Regular', sans-serif !important;
     /* color: #f1f2fa; */
+}
+
+.legal-docs {
+  margin-bottom: 5px;
 }
 
 </style>
