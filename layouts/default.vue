@@ -10,11 +10,11 @@
     >
       <!-- Logo -->
       <button @click="toHome()">
-        <img src="~/assets/images/logo-hzn.png" :height="isMobile ? '50px' : windowWidth > 1300 ? '70px' : '60px'" />
+        <img src="~/assets/images/logo-hzn.png" :height="isMobile ? '50px' : windowWidth > 1000 ? '70px' : '50px'" />
       </button>
 
       <v-spacer />
-      <div v-if="!isMobile">
+      <div v-if="(!isMobile && windowWidth > 1000)">
         <v-btn class="nav-btns"
           v-for="(btn, i) in navBtns"
           :key="i"
@@ -26,7 +26,7 @@
       </div>
 
       <v-menu
-        v-if="isMobile"
+        v-if="(isMobile || windowWidth <= 1000)"
         close-on-click
         close-on-content-click
         bottom
@@ -52,7 +52,7 @@
           </v-list-item>
         </v-list>
       </v-menu>
-
+      
     </v-app-bar>
 
     <v-main class="main">

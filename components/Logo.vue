@@ -34,7 +34,7 @@ export default {
 .icon {
   width: 400px;
   height: 400px;
-  background-image: url('/icon.png');
+  background-image: url('/deltaapps/icon.png');
   background-repeat: no-repeat;
   background-size: contain;
   animation: logo-in 3s ease-in-out forwards;
