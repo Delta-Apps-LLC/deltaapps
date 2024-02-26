@@ -92,7 +92,7 @@ export default {
             avatar: 'penguinboard/penguin-logo-mint.png',
             title: 'Penguin Board',
             description: 'Customizable virtual greeting cards platform.',
-            link: 'https://penguinboard.app',
+            link: 'https://master.d3q0ytjlir01he.amplifyapp.com',
             privacy: 'penguinboard/privacy_policy.pdf',
             terms: 'penguinboard/terms_conditions.pdf'
         },
@@ -130,8 +130,8 @@ export default {
         },
         {
             avatar: 'deltaapps/icon.png',
-            title: 'FamilyHQ',
-            description: 'Platform to manage chores, responsibilities, calendars, and rewards for your family!\n(Coming soon)',
+            title: 'Togetherly',
+            description: 'A mobile app to manage chores, responsibilities, calendars, and rewards for your family!\n(Coming soon)',
             link: 'https://forms.gle/cKQsPoEhHUrPTSWW6',
             privacy: '',
             terms: ''

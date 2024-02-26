@@ -7,8 +7,8 @@
 
       <p class="description" data-aos="fade-left">
         Delta Apps was founded by 
-        <a href="https://www.linkedin.com/in/andrew-thibaudeau/">Andrew Thibaudeau</a> and 
-        <a href="https://www.linkedin.com/in/travisreynertson/">Travis Reynertson</a>. 
+        <a href="https://www.linkedin.com/in/andrew-thibaudeau/">Andrew Thibaudeau</a>, who partnered with 
+        <a href="https://www.linkedin.com/in/travisreynertson/">Travis Reynertson</a> in their endeavors. 
         We started as BYU students that met in the Marriott School's 
         <a href="https://creators.byu.edu/sandbox">Sandbox Program</a>, 
         a Y Combinator-like program. It was during this time that we first learned about entrepreneurship and 
@@ -87,7 +87,7 @@ export default {
           img: 'andrew.jpg',
           imgBlob: 'andrew-blob.png',
           role: 'Software Engineer',
-          title: 'Co-Founder',
+          title: 'Founder',
           intro: 'Andrew was born and raised in Minnesota. From a young age, he was fascinated by technology and knew he wanted to learn how it all works. Though starting his college career in Computer Engineering, he quickly discovered Information Technology and fell in love with all the possibilities that path held. He loves seeing his creations come to life in front of his eyes through mobile and web applications, and wants to use those skills to make life easier for everyone. He is a husband and father to a beautiful wife and wonderful son.',
         },
         {
@@ -95,7 +95,7 @@ export default {
           img: 'travis.jpg',
           imgBlob: 'travis-blob.png',
           role: 'Software Engineer',
-          title: 'Co-Founder',
+          title: 'Consultant/Partner',
           intro: 'Travis is a California native with a passion for the great outdoors and a wide range of adventurous activities, from rock climbing and mountain biking to surfing and tennis.\nIn addition to his outdoor pursuits, Travis is a talented student who is currently pursuing a bachelor\'s degree in Computer Engineering with minors in Mathematics, Computer Science, and Entrepreneurship. He is determined to use his skills to make a positive impact in the world.\nWhen he\'s not busy studying, Travis enjoys traveling and visiting new places and experiencing different cultures firsthand.',
         },
       ]
