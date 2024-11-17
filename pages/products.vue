@@ -1,8 +1,8 @@
 <template>
-  <v-row justify="center" align="center">
+  <div justify="center" align="center">
     <v-col>
       <!-- Products -->
-      <h2>Our Products</h2>
+      <h2 data-aos="fade-up" data-aos-duration="1000">Our Products</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <v-row justify="center" style="margin: 20px;">
         <v-card
@@ -11,11 +11,12 @@
             :key="i"
             width="300px"
             data-aos="fade-up"
+            data-aos-duration="1000"
         >
             <v-card-title class="text-center">
-                <v-avatar size="60">
-                  <img :src="product.avatar" />
-                </v-avatar>
+                <!-- <v-avatar size="60"> -->
+                  <img class="avatar" :src="product.avatar" />
+                <!-- </v-avatar> -->
                 <span class="title">{{product.title}}</span>
             </v-card-title>
 
@@ -39,8 +40,10 @@
         </v-card>
       </v-row>
 
+      <div style="margin-top: 50px;"></div>
+
       <!-- Clients -->
-      <h2>Our Clients</h2>
+      <h2 data-aos="fade-up" data-aos-duration="1000">Our Clients</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <v-row justify="center" style="margin: 10px;">
         <v-card
@@ -49,11 +52,12 @@
             :key="i"
             width="300px"
             data-aos="fade-up"
+            data-aos-duration="1000"
         >
             <v-card-title class="text-center">
-                <v-avatar size="60">
-                  <img :src="client.avatar" />
-                </v-avatar>
+                <!-- <v-avatar size="60"> -->
+                  <img class="avatar" style="border-radius: 10px;" :src="client.avatar" />
+                <!-- </v-avatar> -->
                 <span class="title">{{client.title}}</span>
             </v-card-title>
 
@@ -70,8 +74,23 @@
             </v-card-actions>
         </v-card>
       </v-row>
+
+      <div style="margin-top: 50px;"></div>
+
+      <h2 data-aos="fade-up" data-aos-duration="1000">Product Status</h2>
+      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+      <v-spacer style="margin-top: 1%;"/>
+
+      <ul class="description">
+        <li data-aos="fade-left" data-aos-duration="1000">GOAT Notes was recently updated and has ongoing support</li>
+        <li data-aos="fade-right" data-aos-duration="1000">Ripple is under development - stay tuned for beta test</li>
+        <li data-aos="fade-left" data-aos-duration="1000">Togetherly is under development - stay tuned for beta test</li>
+        <li data-aos="fade-right" data-aos-duration="1000">Write Now has been moved to low priority</li>
+        <li data-aos="fade-left" data-aos-duration="1000">Penguin Board has been moved to low priority</li>
+        <li data-aos="fade-right" data-aos-duration="1000">Make Me Quit has been moved to low priority</li>
+      </ul>
     </v-col>
-  </v-row>
+  </div>
 </template>
 
 <script>
@@ -89,30 +108,6 @@ export default {
       windowWidth: window.innerWidth,
       products: [
         {
-            avatar: 'penguinboard/penguin-logo-mint.png',
-            title: 'Penguin Board',
-            description: 'Customizable virtual greeting cards platform.',
-            link: 'https://master.d3q0ytjlir01he.amplifyapp.com',
-            privacy: 'penguinboard/privacy_policy.pdf',
-            terms: 'penguinboard/terms_conditions.pdf'
-        },
-        {
-            avatar: 'writenow/write-now-logo.png',
-            title: 'Write Now',
-            description: 'Online journal with daily shareable prompts.',
-            link: 'https://joinwritenow.com',
-            privacy: 'writenow/privacy_policy.pdf',
-            terms: 'writenow/terms_conditions.pdf'
-        },
-        {
-            avatar: 'makemequit/make-me-quit-logo.png',
-            title: 'Make Me Quit',
-            description: 'Platform for tech employees to set preferences for future job offers.',
-            link: 'https://makemequit.dev',
-            privacy: '',
-            terms: ''
-        },
-        {
             avatar: 'goatnotes/goat-notes-logo.png',
             title: 'Goat Notes',
             description: 'Note-taking and studying tool made better with AI.',
@@ -121,20 +116,34 @@ export default {
             terms: 'goatnotes/terms_conditions.pdf'
         },
         {
-            avatar: 'deltaapps/icon.png',
+            avatar: 'ripple/ripple-logo.png',
             title: 'Ripple',
-            description: 'Platform to round up all your purchases to donate to charity.\n(Coming soon)',
+            description: 'Round up your purchases to donate to charity.\n(Coming soon)',
             link: 'https://forms.gle/cKQsPoEhHUrPTSWW6',
-            privacy: '',
-            terms: ''
         },
         {
-            avatar: 'deltaapps/icon.png',
+            avatar: 'togetherly/logo.png',
             title: 'Togetherly',
-            description: 'A mobile app to manage chores, responsibilities, calendars, and rewards for your family!\n(Coming soon)',
+            description: 'Manage chores, calendars, and rewards for your family!\n(Coming soon)',
             link: 'https://forms.gle/cKQsPoEhHUrPTSWW6',
-            privacy: '',
-            terms: ''
+        },
+        {
+            avatar: 'penguinboard/penguin-icon.png',
+            title: 'Penguin Board',
+            description: 'Customizable virtual greeting cards platform.',
+            link: 'https://master.d3q0ytjlir01he.amplifyapp.com',
+        },
+        {
+            avatar: 'writenow/write-now-logo.png',
+            title: 'Write Now',
+            description: 'Online journal with daily shareable prompts.',
+            link: 'https://joinwritenow.com',
+        },
+        {
+            avatar: 'makemequit/make-me-quit-logo.png',
+            title: 'Make Me Quit',
+            description: 'Set and control preferences to filter future job offers.',
+            link: 'https://makemequit.dev',
         },
       ],
       clients: [
@@ -149,6 +158,18 @@ export default {
             title: 'KB Facials',
             description: 'Freelance web development for KB Facials',
             link: 'https://kbfacials.com'
+        },
+        {
+            avatar: 'patrickthib/logo.png',
+            title: 'Patrick Thibaudeau',
+            description: 'Freelance web development for Patrick Thibaudeau',
+            link: 'https://patrickthibaudeau.com'
+        },
+        {
+            avatar: 'thearena/the-arena-logo.png',
+            title: 'The Arena',
+            description: 'Freelance web development for The Arena',
+            link: 'https://thearena.netlify.com'
         },
       ]
     }
@@ -173,6 +194,12 @@ export default {
 <style scoped>
 @import '~/assets/style.css';
 
+.description {
+    text-align: left;
+    margin-bottom: 20px;
+    /* margin: 20px 0px; */
+}
+
 .card {
     margin-right: 15px;
     margin-top: 15px;
@@ -184,6 +211,10 @@ export default {
     font-family: 'Aileron Regular', sans-serif !important;
     font-size: 22px !important;
     color: #f1f2fa;
+}
+
+.avatar {
+  height: 50px;
 }
 
 .description {

@@ -1,11 +1,12 @@
 <template>
-  <v-row justify="center" align="center" style="color: #F4F6FC;">
+  <div justify="center" align="center" style="color: #F4F6FC;">
     <v-col>
-      <h2>Contact Us</h2>
+      <h2 data-aos="fade-up" data-aos-duration="1000">Contact Us</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <div style="text-align: center;">
         <div class="description"
           data-aos="fade-right"
+          data-aos-duration="1000"
           :style="{'width': isMobile ? '300px' : '500px'}"
         >
           <span>
@@ -14,42 +15,52 @@
         </div>
 
         <!-- Form -->
-        <v-row justify="center" data-aos="fade-left">
-          <v-card class="form-card" :style="{'width': isMobile ? '90%' : null}">
-            <div class="form-content"
-              :style="{'margin': isMobile ? '10px' : null}"
+        <v-row justify="center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="form-card" :style="{'width': windowWidth < 800 ? '90%' : windowWidth < 1000 ? '75%' : null}">
+            <form class="form-content"
+              :action="'https://submit-form.com/d3Vbd7FJ'"
+              :style="{'margin': isMobile ? '30px 20px' : null}"
             >
-              <form class="form-content"
-                :action="'https://submit-form.com/d3Vbd7FJ'"
-                :style="{'margin': isMobile ? '30px 20px' : null}"
+              <input type="hidden" name="_redirect" value="https://deltaapps.dev/contact" />
+              <input type="text"
+                class="text-field"
+                style="grid-row-start: 1; grid-column-start: 1; grid-column-end: 3;"
+                v-model="name"
+                name="name"
+                placeholder="Name"
+                required
               >
-                <input type="hidden" name="_redirect" value="https://deltaapps.dev/contact" />
-                <v-row>
-                  <input type="text" class="text-field" v-model="name" name="name" placeholder="Name" required>
-                  <input type="email" class="text-field" v-model="email" name="email" placeholder="Email" required>
-                </v-row>
-                <textarea type="text"
-                  class="text-area"
-                  v-model="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Your message here..."
-                  required
-                ></textarea>
-                <v-btn
-                  class="send-btn"
-                  type="submit"
-                >
-                  Send
-                  <v-icon right>mdi-send</v-icon>
-                </v-btn>
-              </form>
-            </div>
-          </v-card>
+              <input type="email"
+                class="text-field"
+                style="grid-row-start: 1; grid-column-start: 3; grid-column-end: 5;"
+                v-model="email"
+                name="email"
+                placeholder="Email"
+                required
+              >
+              <textarea type="text"
+                class="text-area"
+                style="grid-row-start: 2; grid-row-end: 4; grid-column-start: 1; grid-column-end: 5;"
+                v-model="message"
+                name="message"
+                rows="5"
+                placeholder="Your message here..."
+                required
+              ></textarea>
+              <v-btn
+                class="send-btn"
+                type="submit"
+                style="grid-row-start: 4; grid-column-start: 2; grid-column-end: 4;"
+              >
+                Send
+                <v-icon right>mdi-send</v-icon>
+              </v-btn>
+            </form>
+          </div>
         </v-row>
       </div>
     </v-col>
-  </v-row>
+  </div>
 </template>
 
 <script>
@@ -104,17 +115,19 @@ export default {
   justify-content: center;
   background: #2B2E36;
   border-radius: 6px;
-  width: 700px;
+  width: 50%;
+  padding: 20px 40px;
 }
 
 .form-content {
-  margin: 30px 50px;
+  justify-content: center;
   display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-gap: 10px;
 }
 
 .text-field {
-  width: 46%;
-  margin: 2%;
   padding: 6px;
   background-color: #fcfcfc !important;
   border-style: solid;
@@ -127,15 +140,12 @@ export default {
   border-width: 3px;
   border-image: linear-gradient(134.94deg, #233DFF 4.82%, #4986FF 29.27%, #A4B9FF 56.61%, #E2E6FC 70.28%, #F4F6FC 78.15%) 1;
   background-color: #fcfcfc !important;
-  margin: 10px 0px;
   padding: 6px;
 }
 
 .send-btn {
-  justify-self: end;
   background-color: #5CB6F9 !important;
   border-radius: 6px;
-  width: 150px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: 700;

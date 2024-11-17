@@ -1,26 +1,38 @@
 <template>
-  <v-row justify="center" align="center">
+  <div justify="center" align="center">
     <v-col>
-      <h2>How It Started</h2>
+      <h2 data-aos="fade-up" data-aos-duration="1000">How It Started</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <v-spacer style="margin-top: 1%;"/>
 
-      <p class="description" data-aos="fade-left">
+      <p class="description" data-aos="fade-left" data-aos-duration="1000">
         Delta Apps was founded by 
         <a href="https://www.linkedin.com/in/andrew-thibaudeau/">Andrew Thibaudeau</a>, who partnered with 
         <a href="https://www.linkedin.com/in/travisreynertson/">Travis Reynertson</a> in their endeavors. 
-        We started as BYU students that met in the Marriott School's 
+        They started as BYU students that met in the Marriott School's 
         <a href="https://creators.byu.edu/sandbox">Sandbox Program</a>, 
-        a Y Combinator-like program. It was during this time that we first learned about entrepreneurship and 
-        created our first products.
+        a Y Combinator-like program. It was during this time that they first learned about entrepreneurship and 
+        created their first products.
       </p>
-      <p class="description" data-aos="fade-right">
-        We struggled throughout the school year to find traction among our many 
-        ideas, but we eventually found mutual passion in creating software applications that would make a 
-        difference in peoples lives. This began the birth of what is now Delta Apps.
+      <p class="description" data-aos="fade-right" data-aos-duration="1000">
+        Struggling throughout the school year to find traction among many 
+        ideas, they eventually found mutual passion in creating software applications that would make a 
+        meaningful difference in peoples lives. This began the birth of what is now Delta Apps.
       </p>
 
-      <h2>Who We Are</h2>
+      <div style="margin-top: 40px;"></div>
+
+      <h2 data-aos="fade-up" data-aos-duration="1000">Our Mission</h2>
+      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+      <v-spacer style="margin-top: 1%;"/>
+
+      <p class="description" data-aos="fade-up" data-aos-duration="1000">
+        We strive to utilize technology to build platforms and resources to help make a lasting positive impact. This desire is derived from our name. In mathematics, the term &ldquo;delta&rdquo; is defined as the difference or change between two variables. Our desire is similar. The apps that we build are centered in three categories: Productivity, Self-Improvement, and Social Good. We want the delta between your life without our products verses your life with our products to be drastically positive. If we fail in that endeavor, help us know what we can do to make your life better!
+      </p>
+
+      <div style="margin-top: 40px;"></div>
+
+      <h2 data-aos="fade-up" data-aos-duration="1000">Who We Are</h2>
       <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <v-spacer style="margin-top: 1%;"/>
 
@@ -29,43 +41,28 @@
             <img class="team-img"
                 :src="require(`~/assets/images/${person.imgBlob}`)"
                 :data-aos="i == 0 ? 'fade-right' : 'fade-left'"
+                data-aos-duration="1000"
             />
             <v-spacer />
-            <div :data-aos="i == 0 ? 'fade-right' : 'fade-left'">
+            <div :data-aos="i == 0 ? 'fade-right' : 'fade-left'" data-aos-duration="1000">
                 <span class="name-text">{{person.name}}</span>
                 <v-spacer />
                 <span class="role-text">{{person.title}}</span>
                 <v-spacer />
                 <span class="role-text">{{person.role}}</span>
             </div>
-            <hr data-aos="fade-up" :style="{'height': '1px', 'border-radius': '10px', 'background-color': '#dddddd'}">
-            <p class="intro" :data-aos="i == 0 ? 'fade-up-right' : 'fade-up-left'">{{person.intro}}</p>
+            <hr data-aos="fade-up"
+              data-aos-duration="1000"
+              :style="{'height': '1px', 'border-radius': '10px', 'background-color': '#dddddd'}"
+            >
+            <p class="intro"
+              :data-aos="i == 0 ? 'fade-up-right' : 'fade-up-left'"
+              data-aos-duration="1000"
+            >{{person.intro}}</p>
         </v-col>
       </v-row>
-
-      <h2>Our Mission</h2>
-      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
-      <v-spacer style="margin-top: 1%;"/>
-
-      <p class="description" data-aos="fade-up">
-        We strive to utilize technology to build platforms and resources to help make a lasting positive impact. This desire is derived from our name. In mathematics, the term &ldquo;delta&rdquo; is defined as the difference or change between two variables. Our desire is similar. The apps that we build are centered in three categories: Productivity, Self-Improvement, and Social Good. We want the delta between your life without our products verses your life with our products to be drastically positive. If we fail in that endeavor, help us know what we can do to make your life better!
-      </p>
-
-      <h2>Coming Soon</h2>
-      <hr :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
-      <v-spacer style="margin-top: 1%;"/>
-
-      <ul class="description" style="margin-bottom: 50px">
-        <li data-aos="fade-left">We are currently finishing Penguin Board's payment system</li>
-        <li data-aos="fade-right">Write Now will be redeployed and ready for use</li>
-        <li data-aos="fade-left">GOAT Notes is being updated and redeployed</li>
-        <li data-aos="fade-right">The full-scale portal for Make Me Quit will soon be under development</li>
-        <li data-aos="fade-left">Ripple will soon be under development</li>
-        <li data-aos="fade-right">FamilyHQ will soon be under development</li>
-      </ul>
-
     </v-col>
-  </v-row>
+  </div>
 </template>
 
 <script>

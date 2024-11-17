@@ -7,10 +7,9 @@
       flat
       height="100px"
       :style="{'padding': isMobile ? '5px 0' : null}"
-    >
-      <!-- Logo -->
+      >
       <button @click="toHome()">
-        <img src="~/assets/images/logo-hzn.png" :height="isMobile ? '50px' : windowWidth > 1000 ? '70px' : '50px'" />
+        <img src="~/assets/images/logo-hzn.png" :height="isMobile ? '40px' : windowWidth > 1000 ? '50px' : '45px'" />
       </button>
 
       <v-spacer />
@@ -52,24 +51,22 @@
           </v-list-item>
         </v-list>
       </v-menu>
-      
     </v-app-bar>
 
     <v-main class="main">
       <v-container class="main">
-        <DonateButton @click="donate()" />
+        <!-- <DonateButton @click="donate()" /> -->
         <Nuxt class="main" />
       </v-container>
     </v-main>
 
     <v-footer
-      absolute
-      app
+    absolute
+    app
     >
+    <!-- <a class="footer" target="_blank" href="privacy_policy.pdf">Privacy Policy</a> -->
       <span>&copy; 2023 Delta Apps, LLC</span>
-      <!-- <a class="footer" target="_blank" href="privacy_policy.pdf">Privacy Policy</a> -->
       <v-spacer />
-      <span>Contact Us &ndash; <a href="mailto:deltaappsteam@gmail.com">deltaappsteam@gmail.com</a></span>
     </v-footer>
 
     <Logo id="logo" />

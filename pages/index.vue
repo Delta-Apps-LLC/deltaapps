@@ -1,7 +1,7 @@
 <template>
-  <v-row justify="center" align="center">
+  <div justify="center" align="center">
     <v-col class="text-center">
-      <div data-aos="fade-up">
+      <div data-aos="fade-up" data-aos-duration="1000">
         <h1 class="tagline text-center"
           :class="{'active': headingActive}"
           :key="headingKey"
@@ -37,12 +37,13 @@
         class="button"
         to="/contact"
         data-aos="fade-down"
+        data-aos-duration="1000"
       >
         Get in touch
       </v-btn>
 
-      <h2 style="margin-top: 30px; margin-bottom: 2px;" data-aos="fade-up">Our Services</h2>
-      <hr data-aos="fade-up" :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
+      <h2 style="margin-top: 30px; margin-bottom: 2px;" data-aos="fade-up" data-aos-duration="1000">Our Services</h2>
+      <hr data-aos="fade-up" data-aos-duration="1000" :style="{'height': '3px', 'border-radius': '5px', 'background-color': '#dddddd'}">
       <v-spacer style="margin-top: 1%;"/>
 
       <v-row class="services-row" justify="center">
@@ -50,6 +51,7 @@
           v-for="(service, i) in services"
           :key="i"
           :data-aos="i == 0 ? 'fade-right' : i == 1 ? 'fade-up' : 'fade-left'"
+          data-aos-duration="1000"
         >
           <v-card-text class="service-title">{{service.title}}</v-card-text>
           <v-card-text>
@@ -62,11 +64,13 @@
       <v-btn
         class="button"
         to="/about"
+        data-aos="fade-up"
+        data-aos-duration="1000"
       >
         Learn More
       </v-btn>
     </v-col>
-  </v-row>
+  </div>
 </template>
 
 <script>
@@ -106,12 +110,12 @@ export default {
         {
           title: 'Mobile Applications',
           image: 'mdi-cellphone',
-          description: 'Our mobile apps, primarily built with the Flutter framework, are available on the Google Play Store and Apple App Store.'
+          description: 'Our mobile apps, primarily built with the Flutter hybrid framework, are available on the Google Play Store and Apple App Store.'
         },
         {
           title: 'Web Applications',
           image: 'mdi-web',
-          description: 'Our web apps, primarily built with the NuxtJS framework, are available for use.'
+          description: 'Our web apps, primarily built with JavaScript frameworks, are available for use.'
         },
         {
           title: 'Freelance Development',
