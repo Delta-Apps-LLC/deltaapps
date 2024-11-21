@@ -169,7 +169,7 @@ export default {
             avatar: 'thearena/the-arena-logo.png',
             title: 'The Arena',
             description: 'Freelance web development for The Arena',
-            link: 'https://stepinarena.netlify.com'
+            link: 'https://stepinarena.netlify.app'
         },
       ]
     }
