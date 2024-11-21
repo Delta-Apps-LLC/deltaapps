@@ -119,13 +119,13 @@ export default {
             avatar: 'ripple/ripple-logo.png',
             title: 'Ripple',
             description: 'Round up your purchases to donate to charity.\n(Coming soon)',
-            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6',
+            link: 'https://forms.gle/RM6BdK2YnegKn3ib8',
         },
         {
             avatar: 'togetherly/logo.png',
             title: 'Togetherly',
             description: 'Manage chores, calendars, and rewards for your family!\n(Coming soon)',
-            link: 'https://forms.gle/cKQsPoEhHUrPTSWW6',
+            link: 'https://forms.gle/spjWCBCkKUUG6dGK9',
         },
         {
             avatar: 'penguinboard/penguin-icon.png',
@@ -137,13 +137,13 @@ export default {
             avatar: 'writenow/write-now-logo.png',
             title: 'Write Now',
             description: 'Online journal with daily shareable prompts.',
-            link: 'https://joinwritenow.com',
+            link: 'https://joinwritenow.netlify.app',
         },
         {
             avatar: 'makemequit/make-me-quit-logo.png',
             title: 'Make Me Quit',
             description: 'Set and control preferences to filter future job offers.',
-            link: 'https://makemequit.dev',
+            link: 'https://makemequit.netlify.app',
         },
       ],
       clients: [
@@ -169,7 +169,7 @@ export default {
             avatar: 'thearena/the-arena-logo.png',
             title: 'The Arena',
             description: 'Freelance web development for The Arena',
-            link: 'https://thearena.netlify.com'
+            link: 'https://stepinarena.netlify.com'
         },
       ]
     }
