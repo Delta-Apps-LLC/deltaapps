@@ -148,6 +148,7 @@ export default {
 @import '~/assets/style.css';
 
 .app-bar {
+  width: 100vw !important;
   backdrop-filter: blur(10px);
   opacity: 0.99;
   background-color: transparent !important;
